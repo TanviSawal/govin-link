@@ -34,7 +34,7 @@ const DEFAULT_PORT = 20111;
  * Server name, ues in root path.
  * @readonly
  */
-const SERVER_NAME = 'openblock-link-server';
+const SERVER_NAME = 'govin-link-server';
 
 /**
  * The time interval for retrying to open the port after the port is occupied by another openblock-resource server.
@@ -144,7 +144,7 @@ class OpenBlockLink extends Emitter{
         this._httpServer.on('error', e => {
             this.isSameServer('127.0.0.1', this._port).then(isSame => {
                 if (isSame) {
-                    console.log(`Port is already used by other openblock-link server, will try reopening after ${REOPEN_INTERVAL} ms`); // eslint-disable-line max-len
+                    console.log(`Port is already used by other govin-link server, will try reopening after ${REOPEN_INTERVAL} ms`); // eslint-disable-line max-len
                     setTimeout(() => {
                         this._httpServer.close();
                         this._httpServer.listen(this._port, this._host);
