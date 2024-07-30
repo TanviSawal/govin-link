@@ -3,7 +3,7 @@ const path = require('path');
 const fs = require('fs');
 
 const user = 'openblockcc';
-const repo = 'openblock-firmwares';
+const repo = 'govin-firmwares';
 const outputdir = path.resolve('./firmwares');
 const leaveZipped = false;
 
